@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+ <html>
+
+<head th:replace="fragments/styles :: styles">
+<meta charset="ISO-8859-1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>my header file</title> 
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+    	<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--1-col"></div>
+			<div class="mdl-cell mdl-cell--7-col">
+				<h3 th:text="${course.title}"></h3>
+				<a th:href="@{'/openportal/course/'+${course.id}+'/content'}">Content</a> | 
+		 
+				<div class="mdl-cell mdl-cell--12-col" th:text="${course.description}"></div>
+				<div class="mdl-cell mdl-cell--12-col" th:text="${course.audience}"></div>
+				<div class="mdl-cell mdl-cell--12-col" th:text="${course.prerequisite}"></div>
+			</div>
+			<div class="mdl-cell mdl-cell--3-col">
+				<div th:each="course : ${courses}">
+					<a th:href="@{'/openportal/course/'+${course[0]}}" th:text="${course[1]}"></a>	
+				</div>
+			</div>
+			<div class="mdl-cell mdl-cell--1-col"></div>
+		</div>  
+    <div th:replace="fragments/footer :: footer">2016 The Static Templates</div>
+</body>
+</html>
+
+

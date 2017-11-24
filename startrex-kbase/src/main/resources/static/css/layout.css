@@ -1,0 +1,14 @@
+#header{
+	min-height: 60px;
+}
+
+#footer{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+
+.st-row{
+	border-bottom: 2px solid gray;
+	min-height: 100px;
+}

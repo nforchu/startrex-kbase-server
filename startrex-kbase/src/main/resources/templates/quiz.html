@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+ <html>
+
+<head th:replace="fragments/styles :: styles">
+<meta charset="ISO-8859-1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>my header file</title> 
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+    	<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--1-col"></div>
+			<div class="mdl-cell mdl-cell--10-col">
+				<a th:href="@{'/openportal/video/6/primary'}">Video</a> |
+				<a >Notes</a> | 
+				<h2>Question for the quiz will go here</h2>
+			</div>
+			<div class="mdl-cell mdl-cell--1-col">
+				
+			</div>
+			<div class="mdl-cell mdl-cell--1-col"></div>
+		</div>  
+    <div th:replace="fragments/footer :: footer">2016 The Static Templates</div>
+</body>
+</html>

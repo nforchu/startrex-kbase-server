@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+ <html>
+
+<head th:replace="fragments/styles :: styles">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>my header file</title> 
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+    	<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--5-col"></div>
+			<div class="mdl-cell mdl-cell--4-col">			
+				<form method="post" action="/openportal/login">
+				<br/><br/><br/><br/><br/><br/><br/>
+					<span th:if="${loginErrorMessage}"> Invalid username and password</span>
+				<br/>
+					Username:<input type="text" name="username"/><br/><br/>
+					password:<input type="password" name="password"/><br/><br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" value="login"/>
+				</form>
+			</div>
+			<div class="mdl-cell mdl-cell--3-col"></div>
+		</div>  
+    <div th:replace="fragments/footer :: footer">2016 The Static Templates</div>
+</body>
+</html>
